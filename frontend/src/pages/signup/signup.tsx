@@ -63,7 +63,7 @@ const Signup = () => {
   return (
     <div className={style.container}>
       <button className={style.back_button} onClick={() => navigate("/")}>
-        back to login
+        &#8592; back to login
       </button>
       <form className={style.form} onSubmit={handleSignup}>
         <input
