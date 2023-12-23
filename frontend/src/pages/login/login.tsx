@@ -86,7 +86,15 @@ const Login: React.FC<{ onLogin: () => void }> = ({ onLogin }) => {
           Login
         </button>
       </form>
-      <button onClick={() => navigate("/signup")}>signup</button>
+      <div className={style.signup_container}>
+        <div className={style.signup_text}> Don't have an account?</div>
+        <button
+          className={style.signup_button}
+          onClick={() => navigate("/signup")}
+        >
+          Signup here
+        </button>
+      </div>
     </div>
   );
 };

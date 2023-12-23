@@ -44,6 +44,7 @@
   height: 2.5rem;
   align-items: center;
   font-family: unset;
+  margin: 1rem;
 }
 
 form {
@@ -59,11 +60,14 @@ input {
   outline: none;
 }
 
-.signup {
+.signup_container {
   display: flex;
-  margin-top: 1rem;
-  font-family: unset;
+  .signup_text {
+    display: inherit;
+  }
   .signup_button {
-    font-size: 1rem;
+    font: inherit;
+    font-style: italic;
+    text-decoration: underline;
   }
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./signup.module.scss";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -60,9 +61,11 @@ const Signup = () => {
     }
   };
   return (
-    <div>
-      <button onClick={() => navigate("/")}>back to login</button>
-      <form onSubmit={handleSignup}>
+    <div className={style.container}>
+      <button className={style.back_button} onClick={() => navigate("/")}>
+        back to login
+      </button>
+      <form className={style.form} onSubmit={handleSignup}>
         <input
           type="text"
           placeholder="Email"
@@ -85,7 +88,9 @@ const Signup = () => {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <button type="submit">Sign Up</button>
+        <button className={style.submit_button} type="submit">
+          Sign Up
+        </button>
       </form>
       <div></div>
     </div>
