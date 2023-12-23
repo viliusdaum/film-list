@@ -1,0 +1,33 @@
+@import "/src/sass/global.scss";
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  margin: 2rem;
+  padding: unset;
+}
+
+.page_container {
+  display: flex;
+  justify-content: center;
+}
+
+.current {
+  border: 1px;
+  border-color: black;
+}
+
+.active {
+  background-color: $davys-gray;
+  border-radius: 50%;
+  padding: 0.05rem;
+}

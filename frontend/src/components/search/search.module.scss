@@ -1,0 +1,17 @@
+@import '/src/sass/global.scss';
+
+.searchbar{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+};
+
+input{
+    background-color: $baby-powder;
+    border:none;
+    border-bottom: 1px solid black;
+    padding: 5px 10px;
+    outline: none;
+    
+}
+

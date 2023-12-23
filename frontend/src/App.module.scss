@@ -1,0 +1,19 @@
+@import "./sass/global.scss";
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+  font-family: "Montserrat-ExtraLight";
+}
+
+.top_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+body {
+  background-color: $baby-powder;
+}

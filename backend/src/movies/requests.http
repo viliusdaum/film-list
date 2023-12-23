@@ -1,0 +1,15 @@
+### List all movies
+GET http://localhost:3000/movies
+
+
+### Add a movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "name": "test1",
+    "year": "2005"
+}
+
+### Get a particular movie
+GET http://localhost:3000/movies/905
