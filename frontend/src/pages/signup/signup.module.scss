@@ -9,19 +9,24 @@
 
   .form {
     display: inherit;
+    input {
+      margin-bottom: 1rem;
+    }
+    .submit_button {
+      border: unset;
+      border: black 1px solid;
+      font-size: 1rem;
+      width: 9rem;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      height: 2.5rem;
+      align-items: center;
+      font-family: unset;
+      margin: 1rem;
+    }
   }
-
-  .submit_button {
-    border: unset;
-    border: black 1px solid;
-    font-size: 1rem;
-    width: 9rem;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    height: 2.5rem;
-    align-items: center;
-    font-family: unset;
-    margin: 1rem;
+  .error_box {
+    color: red;
   }
 }

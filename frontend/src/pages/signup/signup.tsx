@@ -4,11 +4,13 @@ import style from "./signup.module.scss";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
+
+  const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
   const validateEmail = (email: string) => {
@@ -24,17 +26,17 @@ const Signup = () => {
     setConfirmPasswordError("");
 
     if (!email || !validateEmail(email)) {
-      setEmailError("Please enter a valid email.");
+      setMessage("Invalid email");
       return;
     }
 
     if (!password) {
-      setPasswordError("Password is required");
+      setMessage("Password is required");
       return;
     }
 
     if (password !== confirmPassword) {
-      setConfirmPasswordError("Password and confirm password do not match");
+      setMessage("Passwords don't match");
       return confirmPasswordError;
     }
 
@@ -51,8 +53,7 @@ const Signup = () => {
 
       if (response.ok) {
         console.log("auth ok");
-        return <div>success</div>;
-        // onLogin(); // Only call onLogin if the response was ok
+        setMessage("Sign Up Successful");
       } else {
         console.error("Authentication failed:", data.message);
       }
@@ -92,7 +93,7 @@ const Signup = () => {
           Sign Up
         </button>
       </form>
-      <div></div>
+      <div className={style.error_box}>{message}</div>
     </div>
   );
 };
