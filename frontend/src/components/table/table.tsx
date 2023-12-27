@@ -35,66 +35,28 @@ const Table: React.FC<TableProps> = ({ data }) => {
     return 0;
   });
 
-  // return (
-  //   <div className={styles.table}>
-  //     <table>
-  //       <thead className={styles.head}>
-  //         <LogOut />
-  //         <tr className={styles.tr_head}>
-  //           <div>sort by:</div>
-  //           <th className={styles.head_name} onClick={() => handleSort("Name")}>
-  //             Title
-  //           </th>
-  //           /
-  //           <th className={styles.head_year} onClick={() => handleSort("Year")}>
-  //             Year
-  //           </th>
-  //         </tr>
-  //       </thead>
-
-  //       <tbody>
-  //         {sortedData.map((row) => (
-  //           <tr key={row.Name}>
-  //             <div className={styles.item_container}>
-  //               <td className={styles.body_name}>{row.Name}</td>
-  //               <td className={styles.body_year}>{row.Year}</td>
-  //             </div>
-  //             <hr />
-  //           </tr>
-  //         ))}
-  //       </tbody>
-  //     </table>
-  //   </div>
-  // );
-
   return (
-    <div className={styles.container}>
-      <div className={styles.sort_by}>
-        <div>sort by:</div>
-        <div onClick={() => handleSort("Name")}>Title/</div>
-        <div onClick={() => handleSort("Year")}>Year</div>
-      </div>
+    <table>
+      <thead className={styles.head}>
+        <tr className={styles.tr_head}>
+          <th className={styles.head_name} onClick={() => handleSort("Name")}>
+            Title/
+          </th>
+          <th className={styles.head_year} onClick={() => handleSort("Year")}>
+            Year
+          </th>
+        </tr>
+      </thead>
 
-      <div className={styles.table}>
-        <table>
-          {/* <thead className={styles.head}>
-            <tr className={styles.tr_head}>
-              <th className={styles.head_name}>Title</th>
-              <th className={styles.head_year}>Year</th>
-            </tr>
-          </thead> */}
-
-          <tbody>
-            {sortedData.map((row) => (
-              <tr key={row.Name}>
-                <td className={styles.body_name}>{row.Name}</td>
-                <td className={styles.body_year}>{row.Year}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+      <tbody>
+        {sortedData.map((row) => (
+          <tr key={row.Name}>
+            <td className={styles.body_name}>{row.Name}</td>
+            <td className={styles.body_year}>{row.Year}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

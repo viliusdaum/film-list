@@ -6,24 +6,17 @@ button {
   cursor: pointer;
 }
 
-li {
-  list-style: none;
-}
-
-ul {
-  display: flex;
-  margin: 2rem;
-  padding: unset;
-}
-
 .page_container {
   display: flex;
   justify-content: center;
-}
-
-.current {
-  border: 1px;
-  border-color: black;
+  ul {
+    display: flex;
+    margin: 2rem;
+    padding: unset;
+    li {
+      list-style: none;
+    }
+  }
 }
 
 .active {

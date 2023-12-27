@@ -1,18 +1,18 @@
 table {
   width: 100%;
 }
-
-.sort_by {
+.head {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-bottom: 1rem;
-  cursor: pointer;
+  width: 100%;
+  padding-top: 4rem;
+  .tr_head {
+    display: flex;
+    width: 100%;
+    th {
+      cursor: pointer;
+    }
+  }
 }
-hr {
-  margin: unset;
-}
-
 .tbody {
   display: flex;
 }
@@ -22,6 +22,7 @@ hr {
   flex-direction: column;
   justify-content: flex-end;
   font-size: 1.5rem;
+  border-bottom: 1px solid #000000;
 }
 
 .body_name {
@@ -30,23 +31,4 @@ hr {
   flex-direction: column;
   font-weight: 600;
   font-family: "Montserrat-ExtraBold";
-}
-
-.item_container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.tr_head {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.head {
-  display: flex;
-  width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }

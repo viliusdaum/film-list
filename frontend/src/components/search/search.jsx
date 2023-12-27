@@ -26,11 +26,7 @@ function SearchBar({ callback }) {
       />
 
       {searchValue && ( // Display the "x" icon only when there's searchValue
-        <button
-          type="button"
-          className={styles.clearButton}
-          onClick={clearSearch}
-        >
+        <button onClick={clearSearch}>
           <FaTimes />
         </button>
       )}
